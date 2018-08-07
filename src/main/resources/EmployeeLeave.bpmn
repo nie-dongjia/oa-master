@@ -4,7 +4,7 @@
     <startEvent id="startevent1" name="Start"></startEvent>
     <endEvent id="endevent1" name="End"></endEvent>
     <userTask id="员工请假" name="员工请假" activiti:assignee="张三"></userTask>
-    <userTask id="老板审批" name="老板审批"></userTask>
+    <userTask id="老板审批" name="老板审批" activiti:assignee="老板"></userTask>
     <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="员工请假"></sequenceFlow>
     <sequenceFlow id="flow2" sourceRef="员工请假" targetRef="老板审批"></sequenceFlow>
     <sequenceFlow id="flow3" sourceRef="老板审批" targetRef="endevent1"></sequenceFlow>

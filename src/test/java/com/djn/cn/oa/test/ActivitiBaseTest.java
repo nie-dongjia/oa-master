@@ -64,7 +64,7 @@ public class ActivitiBaseTest {
 //      //工作流的核心对象，ProcessEnginee对象
 //      ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
  
-        ProcessEngine processEngine = ProcessEngineConfiguration.createProcessEngineConfigurationFromResource("activiti.cfg2.xml")   //
+        ProcessEngine processEngine = ProcessEngineConfiguration.createProcessEngineConfigurationFromResource("activiti.cfg.xml")   //
                                     .buildProcessEngine();
         System.out.println("processEngine:"+processEngine);
     }
@@ -164,5 +164,14 @@ public class ActivitiBaseTest {
        for (Task task : tasks) {  
            System.out.println("ID:"+task.getId()+",姓名:"+task.getName()+",接收人:"+task.getAssignee()+",开始时间:"+task.getCreateTime());  
        }  
+   }  
+   @Test  
+   public void startTask2(){  
+   	   ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();   
+       TaskService taskService = processEngine.getTaskService();  
+       //taskId 就是查询任务中的 ID  
+       String taskId = "5002";  
+       //完成请假申请任务  
+       taskService.complete(taskId );  
    }  
 }

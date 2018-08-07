@@ -1,5 +1,5 @@
-DROP DATABASE DB_Activity;
-CREATE DATABASE DB_Activity CHARACTER SET utf8 COLLATE utf8_general_ci;
+DROP DATABASE DB_Activiti;
+CREATE DATABASE DB_Activiti CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE DB_Activity;
 SELECT VERSION();
 SELECT COUNT(*) TABLES, table_schema FROM information_schema.TABLES   WHERE table_schema = 'db_activity' GROUP BY table_schema;
