@@ -21,29 +21,24 @@
 		<aspectjweaver.version>1.8.8</aspectjweaver.version>
 		<mybaits.spring.version>1.2.2</mybaits.spring.version>
 		<druid.version>1.0.18</druid.version>
+		<activiti-version>5.22.0</activiti-version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
-		<!-- Activiti -->
+		<!-- Activity -->
 		<dependency>
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-engine</artifactId>
-			<version>5.15.1</version>
+			<version>${activiti-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-spring</artifactId>
-			<version>5.15.1</version>
+			<version>${activiti-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-explorer</artifactId>
-			<version>5.15.1</version>
+			<version>${activiti-version}</version>
 		</dependency>
 		<!-- Database -->
 		<dependency>
