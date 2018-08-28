@@ -1,5 +1,5 @@
 # oa - master 
-activity 流程设计 for  OA or CRM system 
+activiti 流程设计 for  OA or CRM system 
 
 
 Demo 参考网址 
