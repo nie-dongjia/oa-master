@@ -19,10 +19,10 @@
 		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
-		<property name="initialSize" value="20" />
-		<property name="maxActive" value="50" />
-		<property name="maxIdle" value="20" />
-		<property name="minIdle" value="10" />
+		<property name="initialSize" value="1" />
+		<property name="maxActive" value="2" />
+		<property name="maxIdle" value="1" />
+		<property name="minIdle" value="1" />
 		<property name="defaultAutoCommit" value="false" />
 	</bean>
 
@@ -30,12 +30,15 @@
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-
+	<!--引擎默认配置管理器 -->
 	<bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
 		<property name="dataSource" ref="dataSource" />
 		<property name="transactionManager" ref="transactionManager" />
+		<!-- 数据库脚本更新策略 -->
 		<property name="databaseSchemaUpdate" value="true" />
+		<!-- 是否启用作业执行功能 -->
 		<property name="jobExecutorActivate" value="true" />
+		
 		<property name="enableDatabaseEventLogging" value="true" />
 		<property name="customFormTypes">
 			<list>
